@@ -73,7 +73,7 @@ void link_print(Node *temp)
         temp=temp->next;
         getchar();
     }
-    printf("\n");
+    printf("\t");
 }
 int main(int argc, const char * argv[]) {
     Node *head=NULL;
@@ -86,7 +86,10 @@ int main(int argc, const char * argv[]) {
     
     int ret=0;
     if(get_circle_local(head)>0)
-        printf("has circle and local is %d\n",local);
+    {
+       printf("has circle and local is %d\t",get_circle_local(head));
+        link_print(head);
+    }
     else
         printf("no circle\n");
     return 0;
